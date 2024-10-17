@@ -9,6 +9,8 @@ see [stringr](https://stringr.tidyverse.org),
 [rex](https://cran.r-project.org/package=rex), and
 [rematch2](https://cran.r-project.org/package=rematch2).**
 
+Adding a comment to the readme file.
+
 # regexcite
 
 <!-- badges: start -->
@@ -54,8 +56,7 @@ That’s exactly what `regexcite::str_split_one()` does.
 ``` r
 library(regexcite)
 
-str_split_one(x, pattern = ",")
-#> [1] "alfa"    "bravo"   "charlie" "delta"
+# str_split_one(x, pattern = ",")
 ```
 
 Use `str_split_one()` when the input is known to be a single string. For
@@ -66,10 +67,8 @@ safety, it will error if its input has length greater than one.
 `pattern` to be matched.
 
 ``` r
-str_split_one(x, pattern = ",", n = 2)
-#> [1] "alfa"                "bravo,charlie,delta"
+# str_split_one(x, pattern = ",", n = 2)
 
-y <- "192.168.0.1"
-str_split_one(y, pattern = stringr::fixed("."))
-#> [1] "192" "168" "0"   "1"
+# y <- "192.168.0.1"
+# str_split_one(y, pattern = stringr::fixed("."))
 ```
