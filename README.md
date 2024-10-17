@@ -55,8 +55,9 @@ That’s exactly what `regexcite::str_split_one()` does.
 
 ``` r
 library(regexcite)
-
-# str_split_one(x, pattern = ",")
+source('R/str_split_one.R')
+str_split_one(x, pattern = ",")
+#> [1] "alfa"    "bravo"   "charlie" "delta"
 ```
 
 Use `str_split_one()` when the input is known to be a single string. For
@@ -67,8 +68,10 @@ safety, it will error if its input has length greater than one.
 `pattern` to be matched.
 
 ``` r
-# str_split_one(x, pattern = ",", n = 2)
+str_split_one(x, pattern = ",", n = 2)
+#> [1] "alfa"                "bravo,charlie,delta"
 
-# y <- "192.168.0.1"
-# str_split_one(y, pattern = stringr::fixed("."))
+y <- "192.168.0.1"
+str_split_one(y, pattern = stringr::fixed("."))
+#> [1] "192" "168" "0"   "1"
 ```
