@@ -1,4 +1,5 @@
 # Create regexcite package using the Hadley Wickham tutorial
+############################### The Whole Game ###############################
 library(devtools)
 create_package("/Users/ahannah/Desktop/rPackages/regexcite")
 usethis::use_git()
@@ -48,3 +49,14 @@ use_readme_rmd()
 build_readme()
 
 # Adding this comment on Oct 22, 2024 to test the editing of a file in a new branch oct22-branch, and merging it in to main.
+
+# 1.19 The end: check() and install()
+check()
+install()
+
+
+############################### System Setup ###############################
+devtools::dev_sitrep()
+devtools::install_dev_deps()
+
+############################### Package structure and state ###############################
